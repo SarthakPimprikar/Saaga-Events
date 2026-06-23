@@ -5,7 +5,7 @@ import { hasAccess, Role } from './lib/permissions';
 
 const protectedApiRoutes = ['/api/admin', '/api/protected'];
 const authRoutes = ['/login']; 
-const publicRoutes = ['/unauthorized'];
+const publicRoutes = ['/', '/unauthorized'];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -79,5 +79,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)'],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)'],
 };
