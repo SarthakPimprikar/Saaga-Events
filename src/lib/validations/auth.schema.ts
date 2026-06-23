@@ -7,7 +7,7 @@ export const loginSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   password: z.string().min(1, 'Password is required'),
   role: z.enum(['ADMIN', 'CMS', 'LEAD_MGT'], {
-    invalid_type_error: 'Please select a valid role',
+    message: 'Please select a valid role',
   }),
 });
 

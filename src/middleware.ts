@@ -13,9 +13,10 @@ export async function middleware(request: NextRequest) {
   const isProtectedApiRoute = protectedApiRoutes.some(route => pathname.startsWith(route));
   const isAuthRoute = authRoutes.includes(pathname);
   const isPublicRoute = publicRoutes.includes(pathname);
+  const isApiRoute = pathname.startsWith('/api/');
 
   // Everything that is not API, Auth, Public or Static is considered a Protected UI Route
-  const isProtectedUIRoute = !isProtectedApiRoute && !isAuthRoute && !isPublicRoute;
+  const isProtectedUIRoute = !isApiRoute && !isAuthRoute && !isPublicRoute;
 
   const token = request.cookies.get('accessToken')?.value;
 
