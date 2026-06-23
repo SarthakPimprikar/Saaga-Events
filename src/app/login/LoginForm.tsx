@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("ADMIN");
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -25,7 +26,7 @@ export default function LoginForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, role }),
       });
 
       const data = await res.json();
@@ -33,7 +34,16 @@ export default function LoginForm() {
       if (!res.ok) {
         setError(data.error || "Authentication failed.");
       } else {
-        router.push("/dashboard");
+        // Route based on role
+        if (data.role === 'ADMIN') {
+          router.push("/dashboard");
+        } else if (data.role === 'CMS') {
+          router.push("/cms");
+        } else if (data.role === 'LEAD_MGT') {
+          router.push("/lead-mgt");
+        } else {
+          router.push("/dashboard"); // Fallback
+        }
         router.refresh();
       }
     } catch (err) {
@@ -72,6 +82,31 @@ export default function LoginForm() {
       )}
 
       <form onSubmit={handleLogin} className="space-y-5">
+        <div className="mb-2">
+          <label className="block text-sm font-medium text-gray-300 mb-2">Select Your Role</label>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { id: 'ADMIN', label: 'Admin' },
+              { id: 'CMS', label: 'CMS' },
+              { id: 'LEAD_MGT', label: 'Lead Exec' },
+            ].map((r) => (
+              <button
+                key={r.id}
+                type="button"
+                onClick={() => setRole(r.id)}
+                disabled={loading}
+                className={`py-2 px-2 text-xs font-semibold rounded-xl border transition-all disabled:opacity-50 ${
+                  role === r.id 
+                    ? 'bg-purple-500/20 border-purple-500/50 text-purple-300' 
+                    : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-gray-300'
+                }`}
+              >
+                {r.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div>
           <label className="block text-sm font-medium text-gray-300 mb-1.5" htmlFor="email">
             Email Address

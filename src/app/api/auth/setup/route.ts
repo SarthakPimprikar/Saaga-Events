@@ -25,7 +25,7 @@ export async function POST(req: Request) {
     // Validate password strength
     const pwdResult = newPasswordSchema.safeParse({ password });
     if (!pwdResult.success) {
-      return NextResponse.json({ error: pwdResult.error.errors[0].message }, { status: 400 });
+      return NextResponse.json({ error: pwdResult.error.issues[0].message }, { status: 400 });
     }
 
     const passwordHash = await hashPassword(password);

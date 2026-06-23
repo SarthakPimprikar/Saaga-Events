@@ -6,6 +6,9 @@ const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$
 export const loginSchema = z.object({
   email: z.string().email('Please enter a valid email address'),
   password: z.string().min(1, 'Password is required'),
+  role: z.enum(['ADMIN', 'CMS', 'LEAD_MGT'], {
+    invalid_type_error: 'Please select a valid role',
+  }),
 });
 
 // Use this for user creation / password reset in the future

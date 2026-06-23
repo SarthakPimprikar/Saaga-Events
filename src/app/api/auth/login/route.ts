@@ -35,17 +35,17 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid email or password format.' }, { status: 400 });
     }
 
-    const { email, password } = result.data;
+    const { email, password, role } = result.data;
 
     await dbConnect();
 
-    // 3. Find Admin
+    // 3. Find Admin & Verify Role
     const admin = await Admin.findOne({ email });
-    if (!admin) {
+    if (!admin || admin.role !== role) {
       // Prevent timing attacks by computing dummy hash
-      await verifyPassword(password, '$2b$12$DUMMYHASH12345678901234567890123456789012345678901234');
-      await logAudit({ action: 'LOGIN_FAILED', email, ipAddress, userAgent, details: { reason: 'User not found' } });
-      return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
+      await verifyPassword(password, '$2b$12$NgWqULbuAnQUvIRySzvIWuoIAS5Kd/f3PcSGl4Kxl5/0ByzJbBN7u');
+      await logAudit({ action: 'LOGIN_FAILED', email, ipAddress, userAgent, details: { reason: 'User not found or role mismatch' } });
+      return NextResponse.json({ error: 'Invalid credentials or role' }, { status: 401 });
     }
 
     // 4. Check lockout status
@@ -98,7 +98,7 @@ export async function POST(req: Request) {
     await logAudit({ action: 'LOGIN_SUCCESS', email, ipAddress, userAgent });
 
     // 9. Set Cookies and Return Response
-    const response = NextResponse.json({ success: true }, { status: 200 });
+    const response = NextResponse.json({ success: true, role: admin.role }, { status: 200 });
 
     const isProd = process.env.NODE_ENV === 'production';
 

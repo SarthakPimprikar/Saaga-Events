@@ -27,7 +27,7 @@ const AdminSchema: Schema = new Schema(
     },
     role: {
       type: String,
-      enum: ['ADMIN'],
+      enum: ['ADMIN', 'CMS', 'LEAD_MGT'],
       default: 'ADMIN',
       required: true,
     },
