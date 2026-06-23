@@ -579,8 +579,8 @@ export default function Home() {
             <span className="text-[#e5b869] font-bold text-xs tracking-[0.2em] uppercase">FEATURED PROJECTS</span>
           </div>
           <h2 
-            className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[0.9] tracking-tighter uppercase text-white origin-left whitespace-nowrap"
-            style={{ transform: "scaleX(0.75)" }}
+            className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[0.9] tracking-[0.05em] uppercase text-[#ead5f5] origin-left whitespace-nowrap"
+            style={{ transform: "scaleX(0.55) scaleY(1.3)" }}
           >
             A GLIMPSE INTO THE EVENTS WE'VE BROUGHT TO <span className="text-[#e5b869]">LIFE.</span>
           </h2>
@@ -595,7 +595,7 @@ export default function Home() {
               desc: "Curating A Dynamic Platform Connecting Global Innovators, Visionaries, And Industry Leaders In Dubai.",
               date: "Feb 12-14, 2026",
               location: "JW Marriott Marquis, Dubai",
-              img: "/featured-new-1.png"
+              img: "/innovate-global-summit-2026.png"
             },
             {
               badge: "Private Event",
@@ -603,12 +603,12 @@ export default function Home() {
               desc: "Crafting Unforgettable Luxury Experiences Celebrating Milestones With Elegance And Sophistication in Los Angeles.",
               date: "Jan 24-26, 2026",
               location: "The Ritz-Carlton, Los Angeles",
-              img: "/featured-new-2.png"
+              img: "/timeless-moments-anniversary-gala.png"
             }
           ].map((item, index) => (
             <div key={index} className="flex flex-col md:flex-row w-full bg-[#0a0a0a] border border-white/10 rounded-[2rem] overflow-hidden group hover:border-white/20 transition-all duration-500">
               {/* Image Side */}
-              <div className="md:w-[40%] relative h-[250px] md:h-auto overflow-hidden bg-[#111]">
+              <div className="md:w-[35%] relative h-[300px] md:h-auto overflow-hidden bg-[#111]">
                 {item.img === "/featured-new-1.png" || item.img === "/featured-new-2.png" ? (
                   <div className="w-full h-full animate-pulse bg-white/5"></div>
                 ) : (
@@ -622,38 +622,111 @@ export default function Home() {
               </div>
 
               {/* Content Side */}
-              <div className="md:w-[60%] p-8 md:p-14 flex flex-col justify-center relative">
+              <div className="md:w-[65%] p-6 md:p-10 md:pl-12 lg:pl-16 flex flex-col justify-center relative">
                 {/* Circular Button positioned absolutely top right */}
-                <div className="absolute top-10 right-10 hidden lg:flex items-center justify-center w-20 h-20 rounded-full border border-[#e5b869] group-hover:bg-[#e5b869]/10 transition-colors cursor-pointer">
-                  <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]">
+                <div className="absolute top-10 right-10 hidden lg:flex items-center justify-center w-24 h-24 rounded-full border border-[#e5b869] group-hover:bg-[#e5b869]/10 transition-colors cursor-pointer">
+                  <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full">
                     <path id={"textPath" + index} fill="none" d="M 50, 50 m -32, 0 a 32,32 0 1,1 64,0 a 32,32 0 1,1 -64,0" />
                     <text className="text-[11px] uppercase fill-white font-semibold tracking-widest">
-                      <textPath href={"#textPath" + index} startOffset="0%">view details • view details • </textPath>
+                      <textPath href={"#textPath" + index} startOffset="25%" textAnchor="middle">view details</textPath>
                     </text>
                   </svg>
-                  <ArrowUpRight className="text-white w-5 h-5 group-hover:scale-125 transition-transform" />
+                  <ArrowUpRight className="text-[#e5b869] w-6 h-6" />
                 </div>
 
-                <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white uppercase tracking-tighter mb-4 lg:w-[85%] origin-left leading-[1.1]" style={{ transform: "scaleX(0.85)" }}>
+                <h3 className="text-xl md:text-2xl lg:text-[1.5rem] xl:text-[1.75rem] font-semibold text-[#ead5f5] uppercase tracking-normal -mt-12 mb-8 w-full whitespace-nowrap overflow-hidden text-ellipsis origin-left" style={{ transform: "scaleY(1.65)" }}>
                   {item.title}
                 </h3>
-                <p className="text-gray-300 text-sm md:text-base font-light leading-relaxed max-w-lg mb-10">
+                <p className="text-[#dfcdd0] text-base md:text-lg font-light leading-relaxed max-w-lg mb-20">
                   {item.desc}
                 </p>
 
                 {/* Divider */}
-                <div className="w-full h-px bg-white/10 mb-8"></div>
+                <div className="w-full h-[2px] bg-white/40 mb-8 rounded-full"></div>
 
                 {/* Date and Location */}
                 <div className="grid grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-[#e5b869] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2">DATE:</h4>
-                    <p className="text-white text-sm md:text-base font-medium tracking-wide">{item.date}</p>
+                    <h4 className="text-[#e5b869] text-[10px] md:text-xs font-medium uppercase tracking-widest mb-2">DATE:</h4>
+                    <p className="text-white text-sm md:text-base font-light tracking-wide">{item.date}</p>
                   </div>
                   <div>
-                    <h4 className="text-[#e5b869] text-[10px] md:text-xs font-bold uppercase tracking-widest mb-2">LOCATION:</h4>
-                    <p className="text-white text-sm md:text-base font-medium tracking-wide">{item.location}</p>
+                    <h4 className="text-[#e5b869] text-[10px] md:text-xs font-medium uppercase tracking-widest mb-2">LOCATION:</h4>
+                    <p className="text-white text-sm md:text-base font-light tracking-wide">{item.location}</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="relative z-10 w-full px-4 md:px-8 py-24 max-w-[90rem] mx-auto">
+        {/* Header */}
+        <div className="relative mb-8 w-full pb-4 md:pb-8">
+          <div className="w-full min-w-0 overflow-visible">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#e5b869]"></div>
+              <span className="text-[#e5b869] font-bold text-xs tracking-[0.2em] uppercase">TESTIMONIALS</span>
+            </div>
+            <h2 
+              className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[0.9] tracking-normal uppercase text-[#ead5f5] origin-left whitespace-normal lg:whitespace-nowrap"
+              style={{ transform: "scaleX(0.75)" }}
+            >
+              STORIES FROM <span className="text-[#e5b869]">THE PEOPLE</span> WE'VE CELEBRATED<br />WITH
+            </h2>
+          </div>
+          
+          {/* Nav Buttons */}
+          <div className="hidden md:flex absolute bottom-4 right-0 items-center gap-4 z-20">
+            <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/30 flex items-center justify-center hover:border-white/70 hover:bg-white/5 transition-all cursor-pointer group">
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border border-white/30 flex items-center justify-center hover:border-white/70 hover:bg-white/5 transition-all cursor-pointer group">
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-white/70 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={1.5} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            {
+              text: "\"They Transformed Our Vision Into An Unforgettable Experience. Every Detail Was Flawless—Guests Still Talk About It Months Later!\"",
+              name: "Michael Carter",
+              title: "Global CEO, TechNova",
+              img: "/testimonial-1.png"
+            },
+            {
+              text: "\"Professional, Creative, And Calm Under Pressure. Our Corporate Event Ran Smoother Than We Imagined—Highly Recommended For Their Team.\"",
+              name: "Emily Thompson",
+              title: "Director of Communications",
+              img: "/testimonial-2.png"
+            }
+          ].map((item, index) => (
+            <div key={index} className="bg-[#050505] border border-white/10 rounded-[1.5rem] p-10 md:p-14 flex flex-col gap-8 hover:border-white/20 transition-colors">
+              <div className="flex items-center gap-2">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-[#e5b869] text-[#e5b869]" />
+                ))}
+              </div>
+              <p className="text-[#ead5f5] text-lg md:text-xl font-light italic leading-relaxed">
+                {item.text}
+              </p>
+              <div className="flex items-center gap-4 mt-auto pt-4">
+                <div className="w-14 h-14 rounded-full border border-[#e5b869] p-[2px]">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-[#111] flex items-center justify-center">
+                    <img src={item.img} alt={item.name} className="w-full h-full object-cover" onError={(e) => e.currentTarget.style.display = 'none'} />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-white font-bold text-base tracking-wide">{item.name}</span>
+                  <span className="text-gray-400 text-xs font-medium tracking-wide">{item.title}</span>
                 </div>
               </div>
             </div>
