@@ -174,12 +174,12 @@ export default function Home() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full relative"
+          className="w-full relative h-[70vh] md:h-[85vh] lg:h-screen min-h-[500px]"
         >
           <img
             src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/hero-image-new.jpeg.jpg"
             alt="Hero Content"
-            className="w-full h-auto"
+            className="w-full h-full object-cover"
           />
           
           {/* Dark overlay for better text readability */}
