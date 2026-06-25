@@ -346,7 +346,9 @@ export default function Home() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <h2 className="text-4xl md:text-[2.75rem] font-medium mb-3 text-white tracking-tight">Featured Experiences</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-5xl font-bold uppercase text-white tracking-tighter mb-4">
+              FEATURED <span className="text-[#e5b869]">EXPERIENCES</span>
+            </h2>
             <p className="text-gray-300 text-base md:text-lg font-extralight">Signature projects that redefine excellence.</p>
           </div>
           <Link href="#projects" className="flex items-center gap-2 text-white hover:text-[#e5b869] transition-colors font-semibold tracking-wide">
