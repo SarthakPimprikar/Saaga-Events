@@ -267,11 +267,15 @@ export default function Home() {
             className="flex flex-col"
           >
             <h2 
-              className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] md:leading-[0.85] tracking-normal uppercase mb-10 text-[#ead5f5] lg:origin-left md:whitespace-nowrap lg:[transform:scaleX(0.6)]"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] md:leading-[0.85] tracking-normal uppercase mb-10 text-[#ead5f5] lg:origin-left md:whitespace-nowrap lg:[transform:scaleX(0.6)]"
               style={{ transform: "scaleX(1)" }}
             >
-              CRAFTING<br className="hidden md:block" />
-              <span className="text-[#e5b869] md:ml-0 ml-1">UNFORGETTABLE</span> <br className="md:hidden"/> EVENTS<br className="hidden md:block" />
+              CRAFTING{" "}
+              <br className="hidden md:block" />
+              <span className="text-[#e5b869]">UNFORGETTABLE</span>{" "}
+              <br className="md:hidden"/> 
+              EVENTS{" "}
+              <br className="hidden md:block" />
               WITH PRECISION
             </h2>
 
