@@ -221,7 +221,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 + index * 0.1, ease: "easeOut" }}
-              className="group flex flex-col items-center justify-center py-12 px-4 rounded-[1.5rem] border border-white/20 bg-black hover:border-[#e5b869]/60 transition-colors cursor-pointer"
+              className={`group flex flex-col items-center justify-center py-12 px-4 rounded-[1.5rem] border border-white/20 bg-black hover:border-[#e5b869]/60 transition-colors cursor-pointer ${
+                index === 4 ? "col-span-2 md:col-span-1" : ""
+              }`}
             >
               <div className="w-14 h-14 rounded-full border-2 border-[#e5b869] flex items-center justify-center mb-6 group-hover:bg-[#e5b869]/10 transition-colors">
                 <item.icon className="w-6 h-6 text-[#e5b869]" strokeWidth={2} />
