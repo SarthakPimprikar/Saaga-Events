@@ -5,12 +5,14 @@ import { ArrowRight, ArrowUpRight, Building2, Heart, Utensils, Gift, Coffee, Lay
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [reviewIndex, setReviewIndex] = useState(0);
   const [reviewDirection, setReviewDirection] = useState(1);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const reviews = [
     {
@@ -122,11 +124,49 @@ export default function Home() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <button className="hidden md:block px-8 py-3.5 bg-[#d5a84e] hover:bg-[#c29841] text-black font-bold text-sm tracking-widest uppercase rounded-full transition-all hover:scale-105 shadow-[0_4px_14px_rgba(213,168,78,0.3)]">
-          Get a Quote
-        </button>
+        {/* CTA Button & Mobile Menu Toggle */}
+        <div className="flex items-center gap-4">
+          <button className="hidden md:block px-8 py-3.5 bg-[#d5a84e] hover:bg-[#c29841] text-black font-bold text-sm tracking-widest uppercase rounded-full transition-all hover:scale-105 shadow-[0_4px_14px_rgba(213,168,78,0.3)]">
+            Get a Quote
+          </button>
+          
+          {/* Hamburger Menu Icon */}
+          <button 
+            className="lg:hidden text-white p-2"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-40 bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center pt-20 pb-10 px-6 lg:hidden"
+          >
+            <div className="flex flex-col items-center gap-8 text-center">
+              {["home", "about", "services", "events", "contact"].map((section) => (
+                <Link 
+                  key={section}
+                  href={section === "home" ? "#home" : `#${section}`} 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-2xl font-medium tracking-widest uppercase ${activeSection === section ? "text-[#d5a84e]" : "text-white hover:text-[#e5b869]"} transition-colors`}
+                >
+                  {section}
+                </Link>
+              ))}
+              <button className="mt-8 px-8 py-4 bg-[#d5a84e] text-black font-bold text-lg tracking-widest uppercase rounded-full w-full max-w-xs">
+                Get a Quote
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Hero Content */}
       <main id="home" className="relative z-10 w-full">
@@ -227,11 +267,13 @@ export default function Home() {
             className="flex flex-col"
           >
             <h2 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[0.85] tracking-normal uppercase mb-10 text-[#ead5f5] origin-left whitespace-nowrap"
-              style={{ transform: "scaleX(0.6)" }}
+              className="text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.1] md:leading-[0.85] tracking-normal uppercase mb-10 text-[#ead5f5] lg:origin-left md:whitespace-nowrap"
+              style={{ transform: "scaleX(1)",  // Reset for mobile
+                       ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleX(0.6)" } : {})
+              }}
             >
-              CRAFTING<br />
-              <span className="text-[#e5b869]">UNFORGETTABLE</span> EVENTS<br />
+              CRAFTING<br className="hidden md:block" />
+              <span className="text-[#e5b869] md:ml-0 ml-1">UNFORGETTABLE</span> <br className="md:hidden"/> EVENTS<br className="hidden md:block" />
               WITH PRECISION
             </h2>
 
@@ -358,11 +400,13 @@ export default function Home() {
             <span className="text-[#e5b869] font-bold text-sm tracking-widest uppercase">Services</span>
           </div>
           <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[0.85] tracking-tight uppercase text-[#ead5f5] origin-left whitespace-nowrap"
-            style={{ transform: "scaleX(0.7)" }}
+            className="text-3xl md:text-5xl lg:text-6xl font-bold leading-[1.2] md:leading-[0.85] tracking-tight uppercase text-[#ead5f5] lg:origin-left md:whitespace-nowrap"
+            style={{ transform: "scaleX(1)",  // Reset for mobile
+                     ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleX(0.7)" } : {})
+            }}
           >
-            SHAPING MOMENTS WITH<br />
-            <span className="text-[#e5b869]">MEANING</span>
+            SHAPING MOMENTS WITH<br className="hidden md:block" />
+            <span className="text-[#e5b869]"> MEANING</span>
           </h2>
         </div>
 
@@ -445,7 +489,7 @@ export default function Home() {
       {/* Some Of Our Work Section */}
       <section id="events" className="relative z-10 w-full px-4 md:px-8 py-24 max-w-[100rem] mx-auto">
         <div className="flex flex-col items-center justify-center text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-[4rem] font-bold uppercase text-white tracking-tighter mb-4 whitespace-nowrap origin-center" style={{ transform: "scaleX(0.75)" }}>
+          <h2 className="text-3xl md:text-5xl lg:text-[4rem] font-bold uppercase text-white tracking-tighter mb-4 md:whitespace-nowrap origin-center md:scale-x-75">
             SOME OF <span className="text-[#e5b869]">OUR WORK</span>
           </h2>
           <p className="text-gray-300 text-sm md:text-base max-w-2xl font-light">
@@ -610,7 +654,7 @@ export default function Home() {
       {/* Explore Our Gallery Section */}
       <section id="gallery" className="relative z-10 w-full px-4 md:px-8 py-24 max-w-[100rem] mx-auto">
         <div className="flex flex-col items-center justify-center text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold uppercase text-white tracking-normal mb-4 whitespace-nowrap origin-center" style={{ transform: "scaleX(0.65)", wordSpacing: "0.15em" }}>
+          <h2 className="text-3xl md:text-5xl lg:text-[3.5rem] font-bold uppercase text-white tracking-normal mb-4 md:whitespace-nowrap origin-center" style={{ transform: "scaleX(1)", ...(typeof window !== 'undefined' && window.innerWidth >= 768 ? { transform: "scaleX(0.65)", wordSpacing: "0.15em" } : {}) }}>
             EXPLORE <span className="text-[#e5b869]">OUR GALLERY</span>
           </h2>
           <p className="text-gray-300 text-base md:text-lg max-w-4xl font-light leading-relaxed">
@@ -656,10 +700,10 @@ export default function Home() {
             <span className="text-[#e5b869] font-bold text-xs tracking-[0.2em] uppercase">FEATURED PROJECTS</span>
           </div>
           <h2 
-            className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-[0.9] tracking-[0.05em] uppercase text-[#ead5f5] origin-left whitespace-nowrap"
-            style={{ transform: "scaleX(0.55) scaleY(1.3)" }}
+            className="text-3xl md:text-5xl lg:text-[4rem] font-bold leading-[1.2] md:leading-[0.9] tracking-[0.05em] uppercase text-[#ead5f5] lg:origin-left md:whitespace-nowrap"
+            style={{ transform: "scaleX(1)", ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleX(0.55) scaleY(1.3)" } : {}) }}
           >
-            A GLIMPSE INTO THE EVENTS WE'VE BROUGHT TO <span className="text-[#e5b869]">LIFE.</span>
+            A GLIMPSE INTO THE EVENTS <br className="md:hidden" /> WE'VE BROUGHT TO <span className="text-[#e5b869]">LIFE.</span>
           </h2>
         </div>
 
@@ -711,7 +755,7 @@ export default function Home() {
                   <ArrowUpRight className="text-[#e5b869] w-6 h-6" />
                 </div>
 
-                <h3 className="text-xl md:text-2xl lg:text-[1.5rem] xl:text-[1.75rem] font-semibold text-[#ead5f5] uppercase tracking-normal -mt-12 mb-8 w-full whitespace-nowrap overflow-hidden text-ellipsis origin-left" style={{ transform: "scaleY(1.65)" }}>
+                <h3 className="text-xl md:text-2xl lg:text-[1.5rem] xl:text-[1.75rem] font-semibold text-[#ead5f5] uppercase tracking-normal mt-4 lg:-mt-12 mb-4 lg:mb-8 w-full whitespace-normal lg:whitespace-nowrap overflow-hidden text-ellipsis lg:origin-left" style={{ transform: "scaleY(1)", ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleY(1.65)" } : {}) }}>
                   {item.title}
                 </h3>
                 <p className="text-[#dfcdd0] text-base md:text-lg font-light leading-relaxed max-w-lg mb-20">
@@ -748,10 +792,10 @@ export default function Home() {
               <span className="text-[#e5b869] font-bold text-xs tracking-[0.2em] uppercase">TESTIMONIALS</span>
             </div>
             <h2 
-              className="text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[0.9] tracking-normal uppercase text-[#ead5f5] origin-left whitespace-normal lg:whitespace-nowrap"
-              style={{ transform: "scaleX(0.55)" }}
+              className="text-3xl md:text-7xl lg:text-[5rem] font-bold leading-[1.2] md:leading-[0.9] tracking-normal uppercase text-[#ead5f5] lg:origin-left whitespace-normal lg:whitespace-nowrap"
+              style={{ transform: "scaleX(1)", ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleX(0.55)" } : {}) }}
             >
-              STORIES FROM <span className="text-[#e5b869]">THE PEOPLE</span> WE'VE CELEBRATED<br />WITH
+              STORIES FROM <span className="text-[#e5b869]">THE PEOPLE</span> <br className="md:hidden" /> WE'VE CELEBRATED<br className="hidden md:block" />WITH
             </h2>
           </div>
           
@@ -794,7 +838,8 @@ export default function Home() {
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className="grid grid-cols-1 md:grid-cols-2 gap-8"
           >
-            {reviews.slice(reviewIndex, reviewIndex + 2).map((item, index) => (
+            {/* Show only 1 review on mobile, 2 on desktop */}
+            {reviews.slice(reviewIndex, reviewIndex + (typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 2)).map((item, index) => (
               <div 
                 key={index}
                 className="bg-[#050505] border border-white/10 rounded-[1.5rem] p-10 md:p-14 flex flex-col gap-8 hover:border-white/20 transition-colors h-full"
@@ -834,8 +879,8 @@ export default function Home() {
               <span className="text-[#e5b869] font-bold text-xs tracking-[0.2em] uppercase">BLOG</span>
             </div>
             <h2 
-              className="text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[0.9] tracking-normal uppercase text-[#ead5f5] origin-left whitespace-normal lg:whitespace-nowrap"
-              style={{ transform: "scaleX(0.55)" }}
+              className="text-3xl md:text-7xl lg:text-[5rem] font-bold leading-[1.2] md:leading-[0.9] tracking-normal uppercase text-[#ead5f5] lg:origin-left whitespace-normal lg:whitespace-nowrap"
+              style={{ transform: "scaleX(1)", ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleX(0.55)" } : {}) }}
             >
               INSIGHTS AND IDEAS FROM OUR EVENT
             </h2>
@@ -873,7 +918,7 @@ export default function Home() {
               
               {/* Content */}
               <div className="flex flex-col gap-4 px-2 w-full overflow-hidden">
-                <h3 className="text-sm md:text-base lg:text-lg font-bold text-[#ead5f5] uppercase leading-snug tracking-[0.02em] [word-spacing:0.1em] transition-colors whitespace-nowrap overflow-hidden text-ellipsis origin-left w-[140%]" style={{ transform: "scaleX(0.7) scaleY(1.1)" }}>
+                <h3 className="text-sm md:text-base lg:text-lg font-bold text-[#ead5f5] uppercase leading-snug tracking-[0.02em] [word-spacing:0.1em] transition-colors whitespace-normal md:whitespace-nowrap md:overflow-hidden md:text-ellipsis lg:origin-left w-full md:w-[140%]" style={{ transform: "scaleX(1)", ...(typeof window !== 'undefined' && window.innerWidth >= 1024 ? { transform: "scaleX(0.7) scaleY(1.1)" } : {}) }}>
                   {item.title}
                 </h3>
                 <div className="flex items-center gap-4 text-xs font-semibold tracking-widest uppercase mt-2">
