@@ -587,7 +587,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-4">
           {/* Box 1 (Matches Top Left) */}
           <div className="col-span-1 md:col-span-3 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/award-ceremonies.png.png" alt="Award Ceremonies" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/award-ceremonies.png.png" alt="Award Ceremonies" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -599,7 +599,7 @@ export default function Home() {
 
           {/* Box 2 (Matches 1/3 of Top Middle) */}
           <div className="col-span-1 md:col-span-2 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/seminars-summits.png.png" alt="Seminars & Summits" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/seminars-summits.png.png" alt="Seminars & Summits" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -611,7 +611,7 @@ export default function Home() {
 
           {/* Box 3 (Matches 1/3 of Top Middle) */}
           <div className="col-span-1 md:col-span-2 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/stage-production.png.png" alt="Stage & Production" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/stage-production.png.png" alt="Stage & Production" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -623,7 +623,7 @@ export default function Home() {
 
           {/* Box 4 (Matches 1/3 of Top Middle) */}
           <div className="col-span-1 md:col-span-2 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/award-functions.png.png" alt="Award Functions" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/award-functions.png.png" alt="Award Functions" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -635,7 +635,7 @@ export default function Home() {
 
           {/* Box 5 (Matches Top Right) */}
           <div className="col-span-2 md:col-span-3 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/music-concerts.png.png" alt="Music Concerts" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/music-concerts.png.png" alt="Music Concerts" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -663,25 +663,25 @@ export default function Home() {
         <div className="flex flex-col md:grid md:grid-cols-4 gap-4 md:gap-5">
           {/* Top Row */}
           <div className="col-span-2 rounded-[2rem] relative overflow-hidden shadow-lg h-[300px] md:h-[450px] group cursor-pointer">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-1.png.png" alt="Gallery Image 1" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-1.png.png" alt="Gallery Image 1" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
           <div className="col-span-2 rounded-[2rem] relative overflow-hidden shadow-lg h-[300px] md:h-[450px] group cursor-pointer">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-2.png.png" alt="Gallery Image 2" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-2.png.png" alt="Gallery Image 2" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
 
           {/* Bottom Row */}
           <div className="col-span-1 rounded-[2rem] relative overflow-hidden shadow-lg h-[250px] md:h-[350px] group cursor-pointer">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-3.png.png" alt="Gallery Image 3" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-3.png.png" alt="Gallery Image 3" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
           <div className="col-span-1 rounded-[2rem] relative overflow-hidden shadow-lg h-[250px] md:h-[350px] group cursor-pointer">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-4.png.png" alt="Gallery Image 4" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-4.png.png" alt="Gallery Image 4" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
           <div className="col-span-2 rounded-[2rem] relative overflow-hidden shadow-lg h-[250px] md:h-[350px] group cursor-pointer">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-5.png.png" alt="Gallery Image 5" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-5.png.png" alt="Gallery Image 5" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
         </div>
@@ -729,7 +729,7 @@ export default function Home() {
                 {item.img === "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-new-1.png.png" || item.img === "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-new-2.png.png" ? (
                   <div className="w-full h-full animate-pulse bg-white/5"></div>
                 ) : (
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 )}
                 <div className="absolute top-6 left-6">
                   <div className="bg-[#2a2035]/80 backdrop-blur-md border border-white/10 text-[#e5b869] text-[11px] font-bold tracking-wider px-4 py-2 rounded-lg">
@@ -908,7 +908,7 @@ export default function Home() {
               {/* Image Container */}
               <div className="w-full aspect-[16/10] md:h-[320px] rounded-[1.5rem] overflow-hidden border border-white/20 relative">
                 <div className="absolute inset-0 bg-[#0a0a0a] flex items-center justify-center">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover" onError={(e) => e.currentTarget.style.display = 'none'} />
+                  <motion.img initial={{ opacity: 0, filter: 'blur(10px)' }} whileInView={{ opacity: 1, filter: 'blur(0px)' }} transition={{ duration: 0.8, ease: "easeOut" }} viewport={{ once: true, margin: "-50px" }} src={item.img} alt={item.title} className="w-full h-full object-cover" onError={(e) => e.currentTarget.style.display = 'none'} />
                 </div>
               </div>
               
