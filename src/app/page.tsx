@@ -88,7 +88,7 @@ export default function Home() {
         {/* Logo area */}
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
-            <img src="/footer-logo-clean.png" alt="Saga Event Logo" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/footer-logo-clean.png" alt="Saga Event Logo" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
           </div>
           
           {/* Vertical Divider */}
@@ -177,7 +177,7 @@ export default function Home() {
           className="w-full relative"
         >
           <img
-            src="/hero-image-new.jpeg"
+            src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/hero-image-new.jpeg"
             alt="Hero Content"
             className="w-full h-auto"
           />
@@ -245,7 +245,7 @@ export default function Home() {
           >
             <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
               <img
-                src="/about-us.png"
+                src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/about-us.png"
                 alt="About Us Concert"
                 className="w-full h-full object-cover"
               />
@@ -309,7 +309,7 @@ export default function Home() {
           className="relative w-full mt-24 rounded-[2rem] overflow-hidden group cursor-pointer shadow-2xl border border-white/10"
         >
           <img
-            src="/highlight-video.png"
+            src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/highlight-video.png"
             alt="Watch Our Highlight Reel 2024"
             className="w-full h-auto block transition-transform duration-1000 group-hover:scale-105"
           />
@@ -353,10 +353,10 @@ export default function Home() {
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { img: "/featured-1.png", category: "CORPORATE", title: "Tech Global Summit" },
-            { img: "/featured-2.png", category: "LUXURY WEDDINGS", title: "Royal Palace Union" },
-            { img: "/featured-3.png", category: "EXHIBITIONS", title: "Auto-Expo Pavilion" },
-            { img: "/featured-4.png", category: "AWARDS", title: "Industry Excellence Night" }
+            { img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-1.png", category: "CORPORATE", title: "Tech Global Summit" },
+            { img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-2.png", category: "LUXURY WEDDINGS", title: "Royal Palace Union" },
+            { img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-3.png", category: "EXHIBITIONS", title: "Auto-Expo Pavilion" },
+            { img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-4.png", category: "AWARDS", title: "Industry Excellence Night" }
           ].map((item, index) => (
             <motion.div
               key={index}
@@ -502,7 +502,7 @@ export default function Home() {
           
           {/* Left Column (1/4) */}
           <div className="md:col-span-1 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50">
-            <img src="/exhibitions-trade-shows.png" alt="Exhibitions & Trade Shows" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/exhibitions-trade-shows.png" alt="Exhibitions & Trade Shows" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -517,7 +517,7 @@ export default function Home() {
             {/* Upper: 2 items */}
             <div className="grid grid-cols-2 gap-3 md:gap-4 items-start">
               <div className="rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50">
-                <img src="/brand-activations.png" alt="Brand Activations" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/brand-activations.png" alt="Brand Activations" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -527,7 +527,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50">
-                <img src="/corporate-conferences.png" alt="Corporate Conferences" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/corporate-conferences.png" alt="Corporate Conferences" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
                   <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -540,7 +540,7 @@ export default function Home() {
             {/* Lower: 3 items */}
             <div className="grid grid-cols-3 gap-3 md:gap-4">
               <div className="rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-                <img src="/product-launches.png" alt="Product Launches" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/product-launches.png" alt="Product Launches" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute bottom-3 left-3 z-20 flex flex-col items-start gap-2 pointer-events-none">
                   <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -551,7 +551,7 @@ export default function Home() {
               </div>
 
               <div className="rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-                <img src="/gala-dinners.png" alt="Gala Dinners" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gala-dinners.png" alt="Gala Dinners" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute bottom-3 left-3 z-20 flex flex-col items-start gap-2 pointer-events-none">
                   <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -562,7 +562,7 @@ export default function Home() {
               </div>
 
               <div className="rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-                <img src="/corporate-milestones.png" alt="Corporate Milestones" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/corporate-milestones.png" alt="Corporate Milestones" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
                 <div className="absolute bottom-3 left-3 z-20 flex flex-col items-start gap-2 pointer-events-none">
                   <div className="w-6 h-6 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -576,7 +576,7 @@ export default function Home() {
 
           {/* Right Column (1/4) */}
           <div className="md:col-span-1 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50">
-            <img src="/exhibitions-kiosks.png" alt="Exhibitions & Kiosks" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/exhibitions-kiosks.png" alt="Exhibitions & Kiosks" className="block w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -591,7 +591,7 @@ export default function Home() {
         <div className="grid grid-cols-2 md:grid-cols-12 gap-3 md:gap-4">
           {/* Box 1 (Matches Top Left) */}
           <div className="col-span-1 md:col-span-3 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="/award-ceremonies.png" alt="Award Ceremonies" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/award-ceremonies.png" alt="Award Ceremonies" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -603,7 +603,7 @@ export default function Home() {
 
           {/* Box 2 (Matches 1/3 of Top Middle) */}
           <div className="col-span-1 md:col-span-2 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="/seminars-summits.png" alt="Seminars & Summits" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/seminars-summits.png" alt="Seminars & Summits" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -615,7 +615,7 @@ export default function Home() {
 
           {/* Box 3 (Matches 1/3 of Top Middle) */}
           <div className="col-span-1 md:col-span-2 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="/stage-production.png" alt="Stage & Production" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/stage-production.png" alt="Stage & Production" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -627,7 +627,7 @@ export default function Home() {
 
           {/* Box 4 (Matches 1/3 of Top Middle) */}
           <div className="col-span-1 md:col-span-2 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="/award-functions.png" alt="Award Functions" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/award-functions.png" alt="Award Functions" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -639,7 +639,7 @@ export default function Home() {
 
           {/* Box 5 (Matches Top Right) */}
           <div className="col-span-2 md:col-span-3 rounded-[2rem] relative overflow-hidden group cursor-pointer shadow-lg bg-black/50 flex">
-            <img src="/music-concerts.png" alt="Music Concerts" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/music-concerts.png" alt="Music Concerts" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent z-10 pointer-events-none"></div>
             <div className="absolute bottom-4 left-4 z-20 flex flex-col items-start gap-3 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-black shadow-lg">
@@ -667,25 +667,25 @@ export default function Home() {
         <div className="flex flex-col md:grid md:grid-cols-4 gap-4 md:gap-5">
           {/* Top Row */}
           <div className="col-span-2 rounded-[2rem] relative overflow-hidden shadow-lg h-[300px] md:h-[450px] group cursor-pointer">
-            <img src="/gallery-1.png" alt="Gallery Image 1" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-1.png" alt="Gallery Image 1" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
           <div className="col-span-2 rounded-[2rem] relative overflow-hidden shadow-lg h-[300px] md:h-[450px] group cursor-pointer">
-            <img src="/gallery-2.png" alt="Gallery Image 2" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-2.png" alt="Gallery Image 2" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
 
           {/* Bottom Row */}
           <div className="col-span-1 rounded-[2rem] relative overflow-hidden shadow-lg h-[250px] md:h-[350px] group cursor-pointer">
-            <img src="/gallery-3.png" alt="Gallery Image 3" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-3.png" alt="Gallery Image 3" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
           <div className="col-span-1 rounded-[2rem] relative overflow-hidden shadow-lg h-[250px] md:h-[350px] group cursor-pointer">
-            <img src="/gallery-4.png" alt="Gallery Image 4" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-4.png" alt="Gallery Image 4" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
           <div className="col-span-2 rounded-[2rem] relative overflow-hidden shadow-lg h-[250px] md:h-[350px] group cursor-pointer">
-            <img src="/gallery-5.png" alt="Gallery Image 5" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/gallery-5.png" alt="Gallery Image 5" className="block w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 pointer-events-none"></div>
           </div>
         </div>
@@ -716,7 +716,7 @@ export default function Home() {
               desc: "Curating A Dynamic Platform Connecting Global Innovators, Visionaries, And Industry Leaders In Dubai.",
               date: "Feb 12-14, 2026",
               location: "JW Marriott Marquis, Dubai",
-              img: "/innovate-global-summit-2026.png"
+              img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/innovate-global-summit-2026.png"
             },
             {
               badge: "Private Event",
@@ -724,13 +724,13 @@ export default function Home() {
               desc: "Crafting Unforgettable Luxury Experiences Celebrating Milestones With Elegance And Sophistication in Los Angeles.",
               date: "Jan 24-26, 2026",
               location: "The Ritz-Carlton, Los Angeles",
-              img: "/timeless-moments-anniversary-gala.png"
+              img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/timeless-moments-anniversary-gala.png"
             }
           ].map((item, index) => (
             <div key={index} className="flex flex-col md:flex-row w-full bg-[#0a0a0a] border border-white/10 rounded-[2rem] overflow-hidden group hover:border-white/20 transition-all duration-500">
               {/* Image Side */}
               <div className="md:w-[35%] relative h-[300px] md:h-auto overflow-hidden bg-[#111]">
-                {item.img === "/featured-new-1.png" || item.img === "/featured-new-2.png" ? (
+                {item.img === "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-new-1.png" || item.img === "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/featured-new-2.png" ? (
                   <div className="w-full h-full animate-pulse bg-white/5"></div>
                 ) : (
                   <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
@@ -900,12 +900,12 @@ export default function Home() {
             {
               title: "CREATIVE EVENT THEMES THAT WILL TRULY WOW YOUR GUESTS.",
               date: "NOV 20, 2024",
-              img: "/creative-events-themes-1.png"
+              img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/creative-events-themes-1.png"
             },
             {
               title: "10 CREATIVE WEDDING THEMES TO MAKE YOUR BIG DAY UNFORGETTABLE.",
               date: "NOV 18, 2024",
-              img: "/10-creative-weddings.png"
+              img: "https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/10-creative-weddings.png"
             }
           ].map((item, index) => (
             <div key={index} className="flex flex-col gap-6 group cursor-pointer">
@@ -1022,7 +1022,7 @@ export default function Home() {
         
         {/* Logo */}
         <div className="w-64 md:w-[22rem] flex items-center justify-center mb-24">
-          <img src="/footer-logo-clean.png" alt="Saga Event" className="w-full h-auto object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
+          <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/footer-logo-clean.png" alt="Saga Event" className="w-full h-auto object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
         </div>
 
         {/* Divider */}
