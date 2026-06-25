@@ -88,7 +88,7 @@ export default function Home() {
         {/* Logo area */}
         <div className="flex items-center gap-4">
           <div className="w-14 h-14 md:w-16 md:h-16 flex items-center justify-center">
-            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/footer-logo-clean.png.png" alt="Saga Event Logo" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
+            <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/footer-logo-clean.png.png" alt="Saaga Events Logo" className="w-full h-full object-contain" onError={(e) => e.currentTarget.style.display = 'none'} />
           </div>
           
           {/* Vertical Divider */}
@@ -194,7 +194,7 @@ export default function Home() {
             </h1>
             
             <p className="text-white text-xs md:text-sm lg:text-base max-w-2xl mb-10 font-normal tracking-wide leading-relaxed drop-shadow-md">
-              Saga Event delivers end-to-end solutions in Events, Catering, <br className="hidden md:block" />
+              Saaga Events delivers end-to-end solutions in Events, Catering, <br className="hidden md:block" />
               Gifting and Beverage Services that create impact and leave lasting impressions.
             </p>
             
@@ -1024,7 +1024,7 @@ export default function Home() {
         
         {/* Logo */}
         <div className="w-64 md:w-[22rem] flex items-center justify-center mb-24">
-          <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/footer-logo-clean.png.png" alt="Saga Event" className="w-full h-auto object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
+          <img src="https://res.cloudinary.com/dzpb0jlz0/image/upload/f_auto,q_auto/footer-logo-clean.png.png" alt="Saaga Events" className="w-full h-auto object-contain mix-blend-multiply" onError={(e) => e.currentTarget.style.display = 'none'} />
         </div>
 
         {/* Divider */}

@@ -18,8 +18,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Sega Event India | Premium Event Management",
-  description: "High-end event management platform.",
+  title: "Saaga Events India | Premium Event Management",
+  description: "Crafting Unforgettable Events with Precision",
 };
 
 export default function RootLayout({
