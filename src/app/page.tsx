@@ -74,7 +74,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-yellow-500/30 flex flex-col relative font-sans">
+    <div className="min-h-screen bg-black text-white selection:bg-yellow-500/30 flex flex-col relative font-sans overflow-x-hidden max-w-[100vw]">
       {/* Background removed as user requested only image in middle */}
 
       {/* Navbar (Fixed and dynamic transparency based on scroll position) */}
